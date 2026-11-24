@@ -1,0 +1,44 @@
+:root {
+    --verde-petroleo: #002B36;
+    --verde-petroleo-hover: #004050;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.bg-custom-green {
+    background-color: var(--verde-petroleo) !important;
+}
+
+.text-custom-green {
+    color: var(--verde-petroleo) !important;
+}
+
+.btn-custom-green {
+    background-color: var(--verde-petroleo);
+    border-color: var(--verde-petroleo);
+    color: #ffffff;
+}
+
+.btn-custom-green:hover {
+    background-color: var(--verde-petroleo-hover);
+    border-color: var(--verde-petroleo-hover);
+    color: #ffffff;
+}
+
+.card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .5rem 1rem rgba(0, 43, 54, 0.12) !important;
+}
