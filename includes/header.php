@@ -1,0 +1,34 @@
+<?php
+// Detectamos el archivo actual para resaltar el enlace activo en el menú
+$paginaActual = basename($_SERVER['PHP_SELF']);
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Dev - Blog Personal</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (útil para botones de editar/eliminar) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header class="bg-custom-green text-white py-3 mb-4 shadow-sm">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <a href="index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <i class="bi bi-journal-code fs-4 me-2"></i>
+                <span class="fs-4 fw-bold">Bitácora Dev</span>
+            </a>
+            <nav class="nav nav-pills">
+                <a class="nav-link <?= $paginaActual === 'index.php' ? 'active bg-white text-custom-green fw-bold' : 'text-white' ?>" href="index.php">Inicio</a>
+                <a class="nav-link <?= $paginaActual === 'formulario.php' ? 'active bg-white text-custom-green fw-bold' : 'text-white' ?>" href="formulario.php">+ Nueva Entrada</a>
+                <a class="nav-link <?= $paginaActual === 'acerca.php' ? 'active bg-white text-custom-green fw-bold' : 'text-white' ?>" href="acerca.php">Sobre el Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
