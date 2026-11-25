@@ -45,14 +45,31 @@ include 'includes/header.php';
                 <?= htmlspecialchars($post['contenido']) ?>
             </div>
 
-            <footer class="mt-5 pt-3 border-top d-flex justify-content-between">
+            <footer class="mt-5 pt-3 border-top d-flex justify-content-between align-items-center">
                 <a href="index.php" class="btn btn-outline-secondary">
                     <i class="bi bi-arrow-left me-1"></i> Volver al listado
                 </a>
-                <a href="formulario.php?id=<?= $post['id'] ?>" class="btn btn-custom-green">
-                    <i class="bi bi-pencil me-1"></i> Editar entrada
-                </a>
+                <div class="d-flex gap-2">
+                    <a href="formulario.php?id=<?= $post['id'] ?>" class="btn btn-custom-green">
+                        <i class="bi bi-pencil me-1"></i> Editar entrada
+                    </a>
+                    <form action="eliminar.php" method="POST" class="d-inline form-eliminar" data-titulo="<?= htmlspecialchars($post['titulo']) ?>">
+                        <input type="hidden" name="id" value="<?= $post['id'] ?>">
+                        <button type="submit" class="btn btn-outline-danger">
+                            <i class="bi bi-trash me-1"></i> Eliminar
+                        </button>
+                    </form>
+                </div>
             </footer>
+        </article>
+    </div>
+</div>
+
+<?php include 'includes/footer.php'; ?>
+            </button>
+        </form>
+    </div>
+</footer>
         </article>
     </div>
 </div>

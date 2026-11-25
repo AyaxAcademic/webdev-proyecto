@@ -22,9 +22,9 @@ include 'includes/header.php';
 <section class="p-4 p-md-5 mb-4 rounded text-white bg-custom-green shadow">
     <div class="col-lg-8 px-0">
         <h1 class="display-5 fst-italic">Bienvenido a mi espacio personal</h1>
-        <p class="lead my-3">Bitácora de aprendizaje en desarrollo web construida con HTML5, Bootstrap 5, PHP y SQLite.</p>
+        <p class="lead my-3">Reflexionando sobre la perspectiva individual de la experiencia humana.</p>
         <a href="formulario.php" class="btn btn-light text-custom-green fw-bold">
-            <i class="bi bi-plus-circle me-1"></i> Escribir nuevo artículo
+            <i class="bi bi-plus-circle me-1"></i> Escribir un blog
         </a>
     </div>
 </section>
@@ -74,10 +74,16 @@ include 'includes/header.php';
                             <a href="detalle.php?id=<?= $post['id'] ?>" class="btn btn-custom-green btn-sm">
                                 Leer artículo completo <i class="bi bi-arrow-right ms-1"></i>
                             </a>
-                            <div>
+                            <div class="d-flex gap-2">
                                 <a href="formulario.php?id=<?= $post['id'] ?>" class="btn btn-outline-secondary btn-sm" title="Editar">
                                     <i class="bi bi-pencil"></i> Editar
                                 </a>
+                                <form action="eliminar.php" method="POST" class="d-inline form-eliminar" data-titulo="<?= htmlspecialchars($post['titulo']) ?>">
+                                    <input type="hidden" name="id" value="<?= $post['id'] ?>">
+                                    <button type="submit" class="btn btn-outline-danger btn-sm" title="Eliminar">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -91,7 +97,7 @@ include 'includes/header.php';
         <div class="position-sticky" style="top: 2rem;">
             <div class="p-4 mb-3 bg-white rounded shadow-sm border">
                 <h4 class="fst-italic text-custom-green">Acerca del Autor</h4>
-                <p class="mb-2 text-muted small">Desarrollador web junior construyendo una aplicación CRUD completa con persistencia en SQLite.</p>
+                <p class="mb-2 text-muted small">Siempre me ha gustado externalizar mis pensamientos, y creo que un sitio web sería algo cool y diferente, además de relevante para mis estudios.</p>
                 <a href="acerca.php" class="text-custom-green small fw-bold text-decoration-none">Conocer más &rarr;</a>
             </div>
 
