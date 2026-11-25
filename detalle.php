@@ -28,9 +28,9 @@ include 'includes/header.php';
             </ol>
         </nav>
 
-        <article class="bg-white p-4 p-md-5 rounded shadow-sm border">
+        <article class="bg-dark-surface p-4 p-md-5 rounded shadow-sm border">
             <header class="mb-4 border-bottom pb-3">
-                <span class="badge bg-custom-green mb-2"><?= htmlspecialchars($post['categoria']) ?></span>
+                <span class="badge bg-custom-mid mb-2"><?= htmlspecialchars($post['categoria']) ?></span>
                 <h1 class="fw-bold text-custom-green mb-2"><?= htmlspecialchars($post['titulo']) ?></h1>
                 <p class="text-muted small mb-0">
                     <i class="bi bi-calendar3 me-1"></i> Publicado el <?= date('d/m/Y \a \l\a\s H:i', strtotime($post['fecha_creacion'])) ?>
@@ -41,7 +41,7 @@ include 'includes/header.php';
                 <?= htmlspecialchars($post['resumen']) ?>
             </p>
 
-            <div class="fs-5 lh-base text-dark" style="white-space: pre-line;">
+            <div class="fs-5 lh-base text-light" style="white-space: pre-line;">
                 <?= htmlspecialchars($post['contenido']) ?>
             </div>
 
@@ -50,7 +50,7 @@ include 'includes/header.php';
                     <i class="bi bi-arrow-left me-1"></i> Volver al listado
                 </a>
                 <div class="d-flex gap-2">
-                    <a href="formulario.php?id=<?= $post['id'] ?>" class="btn btn-custom-green">
+                    <a href="formulario.php?id=<?= $post['id'] ?>" class="btn btn-custom-mid">
                         <i class="bi bi-pencil me-1"></i> Editar entrada
                     </a>
                     <form action="eliminar.php" method="POST" class="d-inline form-eliminar" data-titulo="<?= htmlspecialchars($post['titulo']) ?>">

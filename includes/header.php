@@ -3,7 +3,7 @@
 $paginaActual = basename($_SERVER['PHP_SELF']);
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,13 +20,13 @@ $paginaActual = basename($_SERVER['PHP_SELF']);
     <header class="bg-custom-green text-white py-3 mb-4 shadow-sm">
         <div class="container d-flex flex-wrap justify-content-between align-items-center">
             <a href="index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <i class="bi bi-stars fs-4 me-2"></i>
+                <i class="bi bi-stars fs-4 me-2" style="color: #3E899C;"></i>
                 <span class="fs-4 fw-bold">Nebula de Cristal</span>
             </a>
             <nav class="nav nav-pills">
-                <a class="nav-link <?= $paginaActual === 'index.php' ? 'active bg-white text-custom-green fw-bold' : 'text-white' ?>" href="index.php">Inicio</a>
-                <a class="nav-link <?= $paginaActual === 'formulario.php' ? 'active bg-white text-custom-green fw-bold' : 'text-white' ?>" href="formulario.php">+ Nueva Entrada</a>
-                <a class="nav-link <?= $paginaActual === 'acerca.php' ? 'active bg-white text-custom-green fw-bold' : 'text-white' ?>" href="acerca.php">Sobre el Blog</a>
+                <a class="nav-link <?= $paginaActual === 'index.php' ? 'active bg-custom-mid fw-bold' : 'text-white-50' ?>" href="index.php">Inicio</a>
+                <a class="nav-link <?= $paginaActual === 'formulario.php' ? 'active bg-custom-mid fw-bold' : 'text-white-50' ?>" href="formulario.php">+ Nueva Entrada</a>
+                <a class="nav-link <?= $paginaActual === 'acerca.php' ? 'active bg-custom-mid fw-bold' : 'text-white-50' ?>" href="acerca.php">Sobre el Blog</a>
             </nav>
         </div>
     </header>

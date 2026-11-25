@@ -1,6 +1,6 @@
 </main>
 
-    <footer class="py-4 mt-5 bg-white border-top text-center text-muted">
+    <footer class="py-4 mt-5 bg-dark-surface border-top text-center text-muted">
         <div class="container">
             <p class="mb-0">Nebula de Cristal &copy; <?= date('Y') ?> - Un poco de mi galaxia, contigo.</p>
         </div>

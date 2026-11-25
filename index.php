@@ -23,7 +23,7 @@ include 'includes/header.php';
     <div class="col-lg-8 px-0">
         <h1 class="display-5 fst-italic">Bienvenido a mi espacio personal</h1>
         <p class="lead my-3">Reflexionando sobre la perspectiva individual de la experiencia humana.</p>
-        <a href="formulario.php" class="btn btn-light text-custom-green fw-bold">
+        <a href="formulario.php" class="btn btn-custom-green fw-bold">
             <i class="bi bi-plus-circle me-1"></i> Escribir un blog
         </a>
     </div>
@@ -58,7 +58,7 @@ include 'includes/header.php';
                 <article class="card mb-4 border-0 shadow-sm card-hover">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <span class="badge bg-custom-green"><?= htmlspecialchars($post['categoria']) ?></span>
+                            <span class="badge bg-custom-mid"><?= htmlspecialchars($post['categoria']) ?></span>
                             <small class="text-muted">
                                 <i class="bi bi-calendar3 me-1"></i><?= date('d/m/Y H:i', strtotime($post['fecha_creacion'])) ?>
                             </small>
@@ -95,13 +95,13 @@ include 'includes/header.php';
     <!-- Barra Lateral -->
     <aside class="col-md-4">
         <div class="position-sticky" style="top: 2rem;">
-            <div class="p-4 mb-3 bg-white rounded shadow-sm border">
+            <div class="p-4 mb-3 bg-dark-surface rounded shadow-sm border">
                 <h4 class="fst-italic text-custom-green">Acerca del Autor</h4>
                 <p class="mb-2 text-muted small">Siempre me ha gustado externalizar mis pensamientos, y creo que un sitio web sería algo cool y diferente, además de relevante para mis estudios.</p>
                 <a href="acerca.php" class="text-custom-green small fw-bold text-decoration-none">Conocer más &rarr;</a>
             </div>
 
-            <div class="p-4 bg-white rounded shadow-sm border">
+            <div class="p-4 bg-dark-surface rounded shadow-sm border">
                 <h4 class="fst-italic text-custom-green">Categorías</h4>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-1">
